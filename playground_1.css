@@ -1,0 +1,80 @@
+
+/* Custom fonts */
+@font-face
+{
+	font-family: "bangers";
+	font-weight: bold;
+	src: url("bangers.ttf");
+}
+
+/* Everything */
+body
+{
+	background-color: navajowhite;
+}
+
+/* Title background */
+div
+{
+	position: fixed;
+	left: -2px;
+	top: -2px;
+	width: 100vw;
+	border: solid;
+	border-width: 2px;
+	border-color: forestgreen;
+	background: url("unicorn.jpg");
+	background-size: 100% 300%;
+	background-position: left -200px center;
+}
+
+/* Title and subtitle */
+h1,
+h2.subtitle
+{
+	font-family: 'bangers';
+	text-align: center;
+}
+
+/* Title */
+h1
+{
+	color: lawngreen;
+	font-size: 40px;
+	text-shadow: 0px 0px 5px black;
+	transition: color 0.25s, font-size 0.25s;
+}
+h1:hover
+{
+	cursor: pointer;
+}
+h1:active
+{
+	font-size: 39px;
+}
+
+/* Subtitle */
+h2.subtitle
+{
+	position: relative;
+	top: -20px;
+}
+h2.subtitle,
+a.subtitle
+{	
+	font-size: 19px;
+	font-style: italic;
+	text-shadow: 0px 0px 5px white;
+	text-decoration: none;
+	letter-spacing: 0px;
+	color: forestgreen;
+	transition: color 0.35s, font-size 0.35s, letter-spacing 0.35s;
+}	
+a.subtitle:hover
+{
+	font-size: 20px;
+	text-decoration: underline;
+  letter-spacing: 1px;
+  color: red;
+  cursor: pointer;
+}
