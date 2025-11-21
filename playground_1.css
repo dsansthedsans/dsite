@@ -2,9 +2,14 @@
 /* Custom fonts */
 @font-face
 {
-	font-family: "bangers";
+	font-family: Bangers;
 	font-weight: bold;
 	src: url("bangers.ttf");
+}
+@font-face
+{
+	font-family: Impact;
+	src: url("impact.ttf");
 }
 
 /* Everything */
@@ -20,6 +25,7 @@ div
 	left: -2px;
 	top: -2px;
 	width: 100vw;
+	height: 125px;
 	border: solid;
 	border-width: 2px;
 	border-color: forestgreen;
@@ -32,7 +38,7 @@ div
 h1,
 h2.subtitle
 {
-	font-family: 'bangers';
+	font-family: Bangers;
 	text-align: center;
 }
 
@@ -42,15 +48,6 @@ h1
 	color: lawngreen;
 	font-size: 40px;
 	text-shadow: 0px 0px 5px black;
-	transition: color 0.25s, font-size 0.25s;
-}
-h1:hover
-{
-	cursor: pointer;
-}
-h1:active
-{
-	font-size: 39px;
 }
 
 /* Subtitle */
@@ -77,4 +74,73 @@ a.subtitle:hover
   letter-spacing: 1px;
   color: red;
   cursor: pointer;
+}
+
+/* Cativeiro */
+p.main-cativeiro
+{
+	animation-name: "kickbuttowski";
+	color: orangered;
+	opacity: 0;
+	margin-left: 150px;
+	margin-top: 250px;
+	font-family: serif;
+	font-size: 55px;
+	line-height: 45px;
+	width: calc(50vw - (100px * 2));
+}
+span.main-cativeiro
+{
+	color: red;
+	font-family: Impact;
+	font-size: 35px;
+	text-transform: uppercase;
+}
+img.main-cativeiro
+{
+	animation-name: "misterjippy";
+	opacity: 0;
+	position: relative;
+	right: 175px;
+	bottom: 10px;
+	width: 500px;
+	height: 250px;
+	image-rendering: pixelated;
+	float: right;
+}
+p.main-cativeiro,
+img.main-cativeiro
+{
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes kickbuttowski
+{
+  0%
+  {
+  	opacity: 0;
+    translate: -100px 0px;
+  }
+  100%
+  {
+  	opacity: 1;
+    translate: 0px 0px;
+  }
+}
+@keyframes misterjippy
+{
+	0%
+	{
+		scale: 0;
+		opacity: 0;
+		transform: rotate(0deg);
+	}
+	100%
+	{
+		scale: 1;
+		opacity: 1;
+		transform: rotate(calc(360deg * 3));
+	}
 }
