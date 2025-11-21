@@ -1,18 +1,208 @@
 
-<!-- Paragraph element -->
-<p>
+<p> <!-- Paragraph -->
 	How exciting!
 </p> 
 
 
-<!-- Button element -->
-<button>
+<button> <!-- Button -->
 	Hello
 </button>
 
 
-<!-- Anchor element -->
-<a href="https://arngren.net/" target="_blank">
+<a href="https://arngren.net/" target="_blank"> <!-- Anchor -->
 	<!-- {href} and {target} are attributes -->
 	Check out this Site! I made it
 </a>
+
+
+<p><br><br> <!-- Paragraph and line breaks -->
+	My Biggie Buttons:
+</p> 
+
+
+<button class="subscribe"> <!-- YouTube's "Subscribe" button -->
+	SUBSCRIBE
+</button>
+
+
+<button class="join"> <!-- YouTube's "Join" button -->
+	JOIN
+</button>
+
+
+<button class="tweet"> <!-- Twitter's "Tweet" button -->
+	Tweet
+</button>
+
+
+<button class="overly"> <!-- Overly Animated Graphical Control Element -->
+	Overly Animated Graphical Control Element
+</button>
+
+
+<p class="earth"><br><br> <!-- Some Say the Earth -->
+	Some Say the Earth Is Green,<br>
+	Some Say the Earth Is Flat,<br>
+	I Say the Earth Is Shaped Like One Giant Bicycle Wheel!<br>
+	Hear! The Earth Calls for the Divine One
+</p>
+
+
+<head><br><br>
+	HEAD! HEAD! HEAD! HEAD! SINCE WHEN THERE'S A THIRD HEAD? I ONLY KNEW TWO, AND ONE OF THEM IS HARDWORKING WHILE THE OTHER ONE IS HARDLY WORKING! ONE OF THEM RESIDES OVER THE SKY, NEXT TO THE CLOUDS, AMONG THE STARS, AND THE DOES ALL THE WORK WHILE THE OTHER ONE LIES DEEP, DEEP INSIDE MY BODY, BUT PEEKS OUT WHEN THE FRUIT ARE FRESH, AND IT BARELY DOES ANYTHING!
+</head>
+
+<body><br><br>
+	BODY? BODY? BODY? BODY? NOBODY INFORMED ME THERE WAS A BODY? WHAT IS A BODY, PHILOSOPHICALLY SPEAKING? AM I THE BODY? IS THE BODY ME? IS THE BODY'S BODY PART OF MY BODY THAT JUST COINCIDES TO BE THE BODY OF THE BODY? HAVE I BEEN BORN INTO THE RIGHT, CORRECT, SATISFYING, MAGNIFICIENT BODY I'VE WISHED SINCE HIGHSCHOOL? HAVE I BECOME A FAILURE, A LIE, A COPYCAT, BY KILLING THE BODY THAT WERE GIVEN TO ME? NO. NO. NO. NO. SO MANY BODIES.
+</body>
+
+
+<!-- CSS code inside this cutie -->
+<style>
+	p /* All paragraphs */
+	{
+		color: blueviolet;
+	}
+	body
+	{
+		background-color: rgba(128, 200, 124, 1);
+	}
+
+
+	.subscribe /* YouTube's "Subscribe" button */
+	{
+		margin-left : 8px;
+		margin-right: 8px;
+		border: none;
+		border-radius: 3px;
+		padding-left: 16px;
+		padding-right: 16px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		vertical-align: top;
+
+		color: white;
+		background-color: rgb(225, 0, 0);
+		font-size: 15px;
+
+		cursor: pointer;
+		transition: opacity 0.05s;
+	}
+	.subscribe:hover
+	{
+		opacity: 0.6;
+	}
+	.subscribe:active
+	{
+		opacity: 0.5;
+	}
+
+
+	.join /* YouTube's "Join" button */
+	{
+		margin-right: 8px;
+		border-style: solid;
+		border-width: 1px;
+		border-radius: 3px;
+		border-color: rgb(90, 140, 255);
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 9px;
+		padding-bottom: 9px;
+		vertical-align: top;
+		
+		color: rgb(90, 140, 255);
+		background-color: white;
+		font-size: 15px;
+
+		cursor: pointer;
+		transition: color 0.05s, background-color 0.1s;
+	}
+	.join:hover
+	{
+		color: white;
+		background-color: rgb(90, 140, 255);
+	}
+	.join:active
+	{
+		opacity: 0.8;
+	}
+
+
+	.tweet /* Twitter's "Tweet" button */
+	{
+		border: none;
+		border-radius: 25px;
+		padding-left: 16px;
+		padding-right: 16px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		vertical-align: top;
+
+		color: white;
+		background-color: rgb(0, 165, 255);
+		font-size: 15px;
+		font-weight: bold;
+
+		cursor: pointer;
+		transition: box-shadow 0.1s;
+	}
+	.tweet:hover
+	{
+		box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2);
+	}
+	.tweet:active
+	{
+		opacity: 0.8;
+	}
+
+
+	.overly /* Overly Animated Graphical Control Element */
+	{
+		margin-left: 600px;
+		border: none;
+		border-radius: 3px;
+		padding-left: 16px;
+		padding-right: 16px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		vertical-align: top;
+
+		color: white;
+		font-family: serif;
+		font-weight: bold;
+		font-size: 20px;
+		background-color: rgb(0, 150, 75);
+		box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
+
+		cursor: pointer;
+		transition: margin-left 0.5s, margin-top 0.5s, padding-top 0.75s, padding-bottom 0.75s, box-shadow 0.75s;
+	}
+	.overly:hover
+	{
+		margin-left: 620px;
+		margin-top: 20px;
+		padding-top: 250px;
+		padding-bottom: 250px;
+
+		background-image: url('image.jpg');
+		background-blend-mode: multiply;
+		background-size: cover;
+		background-position: center;
+		box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+	}
+	.overly:active
+	{
+		margin-top: -125px;
+		padding-top: 500;
+		padding-bottom: 500px;
+	}
+
+
+	.earth /* Some Say the Earth */
+	{
+		font-family: Comic Sans MS;
+		font-style: italic;
+		font-size: 25px;
+	}
+</style>
