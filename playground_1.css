@@ -76,47 +76,54 @@ a.subtitle:hover
   cursor: pointer;
 }
 
+
 /* Cativeiro */
 p.main-cativeiro
 {
-	animation-name: "kickbuttowski";
-	color: orangered;
-	opacity: 0;
 	margin-left: 150px;
 	margin-top: 250px;
+	width: calc(50vw - (100px * 2));
 	font-family: serif;
 	font-size: 55px;
 	line-height: 45px;
-	width: calc(50vw - (100px * 2));
+	color: orangered;
+	opacity: 0;
+	animation-name: main-cativeiro-p;
+	animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
 span.main-cativeiro
 {
-	color: red;
+	text-transform: uppercase;
 	font-family: Impact;
 	font-size: 35px;
-	text-transform: uppercase;
+	color: red;
 }
 img.main-cativeiro
 {
-	animation-name: "misterjippy";
-	opacity: 0;
+	image-rendering: pixelated;
 	position: relative;
 	right: 175px;
 	bottom: 10px;
 	width: 500px;
 	height: 250px;
-	image-rendering: pixelated;
 	float: right;
-}
-p.main-cativeiro,
-img.main-cativeiro
-{
-  animation-duration: 2s;
+	opacity: 0;
+	transition: right 0.35s, bottom 0.35s, width 0.35s, height 0.35s;
+	animation-name: main-cativeiro-img;
+	animation-duration: 2s;
   animation-delay: 1s;
   animation-fill-mode: forwards;
 }
-
-@keyframes kickbuttowski
+img.main-cativeiro:hover
+{
+	right: calc(175px - (((500px * 1.05) - 500px) / 2));
+	bottom: calc(10px + (((250px * 1.05) - 250px) / 2));
+	width: calc(500px * 1.05);
+	height: calc(250px * 1.05);
+}
+@keyframes main-cativeiro-p
 {
   0%
   {
@@ -129,7 +136,7 @@ img.main-cativeiro
     translate: 0px 0px;
   }
 }
-@keyframes misterjippy
+@keyframes main-cativeiro-img
 {
 	0%
 	{
