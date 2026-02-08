@@ -1,5 +1,4 @@
 
-/* Custom fonts */
 @font-face
 {
 	font-family: Bangers;
@@ -12,14 +11,12 @@
 	src: url("impact.ttf");
 }
 
-/* Everything */
+
 body
 {
 	background-color: navajowhite;
 }
-
-/* Title background */
-div
+div.title
 {
 	position: fixed;
 	left: -2px;
@@ -34,31 +31,25 @@ div
 	background-position: left -200px center;
 }
 
-/* Title and subtitle */
-h1,
-h2.subtitle
+
+h1.title
 {
 	font-family: Bangers;
-	text-align: center;
-}
-
-/* Title */
-h1
-{
-	color: lawngreen;
 	font-size: 40px;
+	text-align: center;
 	text-shadow: 0px 0px 5px black;
+	color: lawngreen;
 }
-
-/* Subtitle */
 h2.subtitle
 {
 	position: relative;
 	top: -20px;
+	font-family: Bangers;
+	text-align: center;
 }
 h2.subtitle,
 a.subtitle
-{	
+{
 	font-size: 19px;
 	font-style: italic;
 	text-shadow: 0px 0px 5px white;
@@ -77,7 +68,6 @@ a.subtitle:hover
 }
 
 
-/* Cativeiro */
 p.main-cativeiro
 {
 	margin-left: 150px;
@@ -100,29 +90,6 @@ span.main-cativeiro
 	font-size: 35px;
 	color: red;
 }
-img.main-cativeiro
-{
-	image-rendering: pixelated;
-	position: relative;
-	right: 175px;
-	bottom: 10px;
-	width: 500px;
-	height: 250px;
-	float: right;
-	opacity: 0;
-	transition: right 0.35s, bottom 0.35s, width 0.35s, height 0.35s;
-	animation-name: main-cativeiro-img;
-	animation-duration: 2s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
-}
-img.main-cativeiro:hover
-{
-	right: calc(175px - (((500px * 1.05) - 500px) / 2));
-	bottom: calc(10px + (((250px * 1.05) - 250px) / 2));
-	width: calc(500px * 1.05);
-	height: calc(250px * 1.05);
-}
 @keyframes main-cativeiro-p
 {
   0%
@@ -136,18 +103,39 @@ img.main-cativeiro:hover
     translate: 0px 0px;
   }
 }
+
+
+img.main-cativeiro
+{
+	
+	float: right;
+	position: relative;
+	right: 175px;
+	bottom: 10px;
+	width: 500px;
+	height: 300px;
+	transition: scale 0.25s;
+	animation-name: main-cativeiro-img;
+	animation-delay: 1s;
+	animation-duration: 1.75s;
+  animation-fill-mode: backwards;
+}
+img.main-cativeiro:hover
+{
+	scale: 1.05;
+}
 @keyframes main-cativeiro-img
 {
 	0%
 	{
-		scale: 0;
 		opacity: 0;
+		scale: 0;
 		transform: rotate(0deg);
 	}
 	100%
 	{
-		scale: 1;
 		opacity: 1;
-		transform: rotate(calc(360deg * 3));
+		scale: 1;
+		transform: rotate(360deg * 3);
 	}
 }
