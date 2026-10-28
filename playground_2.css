@@ -1,35 +1,140 @@
+@font-face
+{
+	font-family: Bangers;
+	font-weight: bold;
+	src: url("bangers.ttf");
+}
+@font-face
+{
+	font-family: Impact;
+	src: url("impact.ttf");
+}
 * /* Everything */ 
 {
 	margin: 0;
 }
-.body /* Body */
+.body
 {
 	color: white;
+	/*background*/
 	background-color: black;
 }
-.header /* Header */
+.header
 {
-	position: sticky;
 	top: 0;
+	/*position*/
+	position: sticky;
+	/*padding*/
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-family: cursive;
-	font-size: 25px;
-	text-align: center;
-	color: black;
+	/*flex*/
+	display: flex; /*Activates flex container*/
+	flex-direction: row; /*Defines the flex container's main axis*/
+	justify-content: center; /*Aligns flex items along the flex container's main axis*/
+	align-items: center; /*Aligns flex items along the flex container's cross axis*/
+	/*background*/
 	background-color: white;
 }
-.sidenav /* Side navigation */
+.header-title
 {
-	position: fixed;
-	width: 0px; /*200px*/;
+	color: black;
+	/*font*/
+	font-size: 50px;
+	font-family: cursive;
+	/*text*/
+	text-align: center;
+}
+.header-button
+{
+	left: 25px;
+	color: red;
+	/*position*/
+	position: absolute;
+	/*text*/
+	text-align: center;
+}
+#sidenav
+{
+	width: 0px;
 	height: 100%;
+	position: fixed;
 	overflow-x: hidden;
 	z-index: 1;
-	background-color: red;
+	/*flex*/
+	display: flex; /*Activates flex container*/
+	flex-direction: column; /*Defines the flex container's main axis*/
+	align-items: center; /*Aligns flex items along the flex container's cross axis*/
+	/*background*/
+	background-color: slategray;
+	/*transition*/
+	transition-property: width;
+	transition-duration: 0.175s;
+}
+#sidenav.open
+{
+	width: 250px;
+	/*transition*/
 	transition: width 0.35s;
 }
-.main /* Main */
+.sidenav-button, .sidenav-button-alt
+{
+	width: 200px;
+	color: darkslategray;
+	/*margin*/
+	margin-top: 25px;
+	/*padding*/
+	padding-top: 5px;
+	padding-bottom: 5px;
+	/*box*/
+	box-shadow: darkslategray -5px 5px;
+	/*border*/
+	border-style: none;
+	border-radius: 5px;
+	/*font*/
+	font-size: 25px;
+	font-family: Bangers;
+	/*text*/
+	text-align: center;
+	text-wrap-mode: wrap;
+	text-wrap-style: balance;
+	/*transition*/
+	transition-property: all;
+	transition-duration: calc(0.125 / 2)s;
+}
+.sidenav-button-alt
+{
+	filter: brightness(1);
+	/*font*/
+	font-family: Impact;
+	/*animation*/
+	animation-name: sidenav-button-alt;
+	animation-duration: 0.5s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+@keyframes sidenav-button-alt
+{
+	0%
+	{
+		transform: translate(0px, 0px);
+		filter: brightness(1);
+	}
+	100%
+	{
+		transform: translate(0px, -3px);
+		filter: brightness(1.25);
+	}
+}
+.sidenav-button:hover, .sidenav-button-alt:hover
+{
+	opacity: 0.875;
+}
+.sidenav-button:active, .sidenav-button-alt:active
+{
+	opacity: 0.75;
+}
+.main
 {
 	
 }

@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <!-- Contains everything -->
-<html> 
-
+<html lang="en"> 
 	<!-- Contains all invisible elements -->
 	<head>
 		<title>Playground #2</title>
 		<link rel="stylesheet" href="playground_2.css">
 		<script src="playground_2.js"></script>
 	</head>
-
 	<!-- Contains all visible elements -->
 	<body class="body">
-		
-		<!-- Header -->
+		<!-- Header (pages-wide content) -->
 		<header class="header">
-			<h1 onclick="sidenav_open()">PLAYGROUND #2</h1>
+			<button class="header-button" onclick="sidenav_open()">Home</button>
+			<h1 class="header-title">PLAYGROUND #2</h1>
 		</header>
-
 		<!-- Side navigation -->
-		<div class="sidenav" id="sidenav">
-			fuckyou
+		<div id="sidenav">
+			<button class="sidenav-button">Living Room</button>
+			<button class="sidenav-button">Kitchen</button>
+			<button class="sidenav-button">Bedroom</button>
+			<button class="sidenav-button">Bathroom</button>
+			<button class="sidenav-button-alt">basement</button>
+			<button class="sidenav-button">Garden</button>
 		</div>
-
-		<!-- Main -->
+		<!-- Main (per-page content) -->
 		<main class="main">
-			A
+			
 		</main>
-
 	</body>
 </html>
